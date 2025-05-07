@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | Priya Sharma</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Priya Sharma</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio">
+    <h2>My Work</h2>
+    <div class="gallery bounce-in">
+        <div class="item tilt tilt-left"><img src="images/work1.jpeg" alt="Design 1" onclick="openLightbox(this)"/></div>
+        <div class="item tilt tilt-right"><img src="images/work2.jpeg" alt="Design 2" onclick="openLightbox(this)"/></div>
+        <div class="item tilt tilt-mid"><img src="images/work3.jpeg" alt="Design 3" onclick="openLightbox(this)"/></div>
+        <div class="item tilt tilt-left"><img src="images/work4.jpeg" alt="Design 4" onclick="openLightbox(this)"/></div>
+      </div>
+      
+      <!-- Lightbox -->
+      <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Enlarged work" />
+      </div>
+      
+  </section>
+
+
+
+
+
+  <script>
+    function openLightbox(img) {
+      document.getElementById("lightbox").style.display = "flex";
+      document.getElementById("lightbox-img").src = img.src;
+    }
+    
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+    </script>
+    
+</body>
+</html>
